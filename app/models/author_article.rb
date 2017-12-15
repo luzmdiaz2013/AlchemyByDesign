@@ -1,5 +1,5 @@
 class AuthorArticle < ApplicationRecord
-  t.belongs_to :author
-  t.belongs_to :article
+  belongs_to :author
+  belongs_to :article
 
 end
