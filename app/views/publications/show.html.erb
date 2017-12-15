@@ -1,0 +1,11 @@
+<h1><%= @article.name %></h1>
+
+<h2>Title: <%= @article.title %></h2>
+
+<%= link_to "Edit  #{@article.name}", edit_publications_path(@article) %>
+
+<%= form_for @article, html: {method: 'delete'} do |f| %>
+  <%= f.submit "Delete #{@article.name}??" %>
+<% end %>
+
+<%= link_to "All Articles", publications_path %>

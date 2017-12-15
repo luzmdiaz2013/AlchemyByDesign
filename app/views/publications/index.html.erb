@@ -1,0 +1,7 @@
+<h1>All our wonderful cats!</h1>
+
+<ul>
+<% @articles.each do |articles| %>
+  <li><%= link_to article.name, publications_path(article)%></li>
+<% end %>
+</ul>

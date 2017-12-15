@@ -7,36 +7,36 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def new
-    @article = Article.new
-  end
+  # def new
+  #   @article = Article.new
+  # end
 
-  def create
-    @article = Article.new(article_params)
-    if @article.save
-      redirect_to article_path(@article)
-    else
-      render :new
-  end
+  # def create
+  #   @article = Article.new(article_params)
+  #   if @article.save
+  #     redirect_to publications_path(@article)
+  #   else
+  #     render :new
+  # end
 
-  def edit
-    @article = Article.find(params [:id])
-  end
+  # def edit
+  #   @article = Article.find(params [:id])
+  # end
 
-  def update
-    @article = Article.find(params [:id])
-    if @article.update(article_params)
-      redirect_to article_path(@article)
-    else
-      redirect_to article_edit_path(@article)
-    end
-  end
+  # def update
+  #   @article = Article.find(params [:id])
+  #   if @article.update(article_params)
+  #     redirect_to publications_path(@article)
+  #   else
+  #     redirect_to publications_edit_path(@article)
+  #   end
+  # end
 
-  def destroy
-    @article = Article.find(params[:id])
-    @article.delete
-    redirect_to article_path
-  end
+  # def destroy
+  #   @article = Article.find(params[:id])
+  #   @article.delete
+  #   redirect_to publications_path
+  # end
 
 
   private
