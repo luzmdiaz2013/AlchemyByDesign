@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <!-- //********************************* This is the link to the css **********************************// -->
+  <link href="FinalProject.css" rel="stylesheet" type="text/css"><!-- //************************************* This is the link to the font ******************************// -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Quicksand|Raleway" rel="stylesheet">
+
+  <title>Projects</title>
+  <style type="text/css">
+
+     body{
+     margin: 0;
+     }
+
+     .sec1{
+         height:auto;
+         width:100vw;
+         display: flex;
+     }
+
+     #slideShow{
+         height:auto;
+         width:100vw;
+
+     }
+
+     .mySlides{
+         height: 80vh;
+         width:60vw;
+
+     }
+
+
+     .forwardButton{
+         width: 100px;
+         height: 50px;
+         border-radius: 5px;
+         border-color: #6B5350;
+         background-image: linear-gradient(to right, #F5F0F0 -30%, #6B5350 100%);
+         color: white;
+         font-size: 30px;
+         margin: 30px;
+         outline: none;
+     }
+
+     .backButton{
+         width: 90px;
+         height: 50px;
+         border-radius: 5px;
+         border-color: #6B5350;
+         background-image: linear-gradient(to right, #F5F0F0 -30%, #6B5350 100%);
+         color: white;
+         font-size: 30px;
+         margin: 30px;
+         outline: none;
+     }
+
+     .projectSlides{
+         height: 500px;
+         width:600px;
+
+     }
+
+
+     h1{
+         font-size: 50px;
+     }
+
+     h2{
+         font-family: 'Raleway', sans-serif;
+         font-size: 30px;
+         color: #1C1211;
+         font-weight: bold;
+     }
+
+     a{
+         text-decoration: none;
+         color: #F5F0F0;
+     }
+
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="navDiv">
+      <nav>
+        <ul>
+          <li>
+            <a href="index-FinalProject.html">Home</a>
+          </li>
+
+
+          <li>
+            <a href="Bio.html">About</a>
+          </li>
+
+
+          <li>
+            <a href="Projects.html">Projects</a>
+          </li>
+
+
+          <li>
+            <a href="Publications.html">Publications</a>
+          </li>
+
+
+          <li>
+            <a href="Videos.html">Videos</a>
+          </li>
+
+
+          <li>
+            <a href="Audio.html">Audio</a>
+          </li>
+
+
+          <li>
+            <a href="Contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <br>
+
+
+    <header>
+      <div id="header">
+        <br>
+        <br>
+
+
+        <h1>Alchemy by Design</h1>
+      </div>
+    </header>
+
+
+    <div class="sections" id="sec1">
+      <!-- ************************* Project Pics courtesy of Diana Hernandez, Alchemy by Design Corp ************************ -->
+
+
+      <h2>Real Estate Rehab Projects</h2>
+
+
+      <center>
+        <!-- ********************* Slide show JS and HTML from Class ************************* -->
+
+
+        <div id="slideShow">
+          <img class="projectSlides" src="projects/HomePage.png"> <img class="projectSlides" src="projects/BrownstoneFront.jpg"> <img class="projectSlides" src="projects/BrownstoneFront2.jpg"> <img class="projectSlides" src="projects/BrownstoneFrontBefore.jpg"> <img class="projectSlides" src="projects/BrownstoneFrontBefore2.jpg"> <img class="projectSlides" src="projects/BrownstoneFrontPart.jpg"> <img class="projectSlides" src="projects/beforeHole.jpg"><br>
+          <br>
+          <input class="forwardButton" onclick="plusSlides(1)" type="button" value="+"> <input class="backButton" onclick="plusSlides(-1)" type="button" value="-"><br>
+          <br>
+        </div>
+      </center>
+      <script type="text/javascript">
+
+               var slideIndex = 1;
+               showSlides(slideIndex);
+
+
+
+               function plusSlides(n) {
+                   showSlides(slideIndex += n);
+
+               }
+
+
+
+
+               function showSlides(n) {
+
+                   var i;
+                   var x = document.getElementsByClassName('projectSlides');
+                   if (n > x.length) {slideIndex = 1}
+                   if (n < 1) {slideIndex = x.length}
+                   for (i = 0; i < x.length; i++) {
+                       x[i].style.display = "none";
+                   }
+
+                   x[slideIndex - 1].style.display = "block";
+
+               }
+
+
+
+
+
+
+      </script>
+    </div>
+    <!-- //This is slideshow end div -->
+  </div>
+
+
+  <!-- //********************************** This is the table div for footer ***********************************// -->
+
+
+  <footer>
+    <div class="footer" id="footer1">
+      <center>
+      </center>
+
+
+      <table>
+        <tr>
+          <td class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebooklogo.png"></a>
+          </td>
+
+          <td class="social">
+            <a href="https://www.instagram.com/?hl=en"><img src="images/instagramlogo.png"></a>
+          </td>
+
+          <td class="social">
+            <a href="https://www.linkedin.com/in/diana-hern%C3%A1ndez-10668237/"><img src="images/linkedInLogo.png"></a>
+          </td>
+
+          <td class="social">
+            <a href="https://twitter.com/?lang=en"><img src="images/twitterlogo.png"></a>
+          </td>
+
+          <td class="social">
+            <a href="https://www.pinterest.com/"><img src="images/pinterestLogo.png"></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="footer" id="footer2">
+      <center>
+        <p>| 116th Street and Broadway, New York, NY 10027 |</p>
+      </center>
+    </div>
+
+
+    <div class="footer" id="footer3">
+      <center>
+        <p><a href="Contact.html">Contact Me</a>
+        </p>
+      </center>
+    </div>
+  </footer>
+</body>
+</html>
