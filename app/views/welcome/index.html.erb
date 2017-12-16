@@ -6,13 +6,13 @@
 <% end %>
 </ul>
 
-<li><%= link_to "Add New Article", new_article_path(article)%></li>
+<li><%= link_to "Add New Article", new_article_path(@article)%></li>
 
-<li><%= link_to "Delete Article", article_path(@article)%></li>
+<li><%= link_to "Delete Article", article_path(article)%></li>
 
 <%= form_for @article, html: {method: 'delete'} do |f| %>
   <%= f.submit "Delete #{@article.title}??" %>
-
+<% end %>
 
 <!DOCTYPE html>
 
@@ -94,7 +94,7 @@
 
 <body onload="MovePicQuote()">
   <section id="container">
-    <div id="navDiv">
+    <!-- <div id="navDiv">
       <nav>
         <ul>
           <li>
@@ -145,7 +145,7 @@
 
         <h1>Alchemy by Design</h1>
       </div>
-    </header>
+    </header> -->
     <br>
 
 
@@ -190,7 +190,7 @@
 
 
     </script> <!-- //********************************** This is the table div for the footer ***********************************// -->
-    <footer>
+    <!-- <footer>
       <div class="footer" id="footer1">
         <center>
         </center>
@@ -235,7 +235,7 @@
           </p>
         </center>
       </div>
-    </footer>
+    </footer> -->
 </section>
 
 
