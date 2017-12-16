@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get "/audio", to: "welcome#audio"
   get "/contact", to: "welcome#contact"
 
-
-
   resources :articles
 # resources :session, only: [:new, :create, :destroy] FOR AUTH
 end

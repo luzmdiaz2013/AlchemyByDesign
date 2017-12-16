@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- //********************************* This is the link to the css **********************************// -->
+
+<link rel="stylesheet" type="text/css" href="FinalProject.css">
+
+<!-- //************************************* This is the link to the font ******************************// -->
+
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Quicksand|Raleway" rel="stylesheet">
+
+	<title>Contact Me</title>
+
+<style type="text/css">
+	
+	body{
+	margin: 0;
+	padding: 0;
+	}
+
+	h1{
+		font-size: 50px;
+	}
+
+	.sections{
+		/*margin: 0;
+		padding: 0;*/
+		height: auto;
+		width: 100vw;
+		display:inline-block;
+
+	}
+
+	.container{
+		height: auto;
+		width: 100vw;
+
+	}
+
+	#APics{
+		vertical-align: top;
+		height: 425px;
+		width: 350px;
+		background-color: orange;
+		display:inline-block;
+		margin: 30px;
+		margin-right: 60px;
+		box-shadow: 1px 0px 1px 1px grey;
+		background-size: cover;
+	}
+
+	form{
+		display: inline-block;
+		margin: 30px;
+		background-color: #F5F0F0;
+		text-align: left;
+		font-family: 'Raleway', sans-serif;
+		height: 400px;
+		width:800px;
+		padding: 10px;
+		box-shadow: 1px 0px 1px 1px grey;
+
+	}
+	/*input[type=button]:hover{
+		border: solid;
+		background-color: lightgrey;
+		width: 90%;
+		height:40%;
+	}*/
+
+	input[type=text]:focus {
+		/*background-color: grey;*/
+		color: black;
+		
+		transition: 2s;
+	}
+
+	footer{
+		position: relative;
+		bottom: 0;
+	}
+
+	.nameFillIn{
+		width: 600px;
+		height:30px;
+		text-align: left;
+	}
+
+	.messageFillIn{
+		width: 600px;
+		height:150px;
+	}
+
+	.submitButton{
+		width: 100px;
+		height: 80px;
+		font-size: 20px;
+		font-family: 'Raleway', sans-serif;
+
+	}
+
+	</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="navDiv">
+
+		<nav> 
+			<ul>
+				<li><a href="index-FinalProject.html">Home</a></li>
+		        <li><a href="Bio.html">About</a></li>
+		        <li><a href="Projects.html">Projects</a></li>
+		        <li><a href="Publications.html">Publications</a></li>
+		        <li><a href="Videos.html">Videos</a></li>
+		        <li><a href="Audio.html">Audio</a></li>
+		        <li><a href="Contact.html">Contact</a></li>
+
+		    </ul>
+		</nav>
+
+	</div>
+	<br>
+
+		<header>
+			<div id="header">
+
+			<br>
+			<br>
+			<h1>Alchemy by Design</h1>
+
+			</div>
+
+		</header>
+	
+	
+	<br>
+	<div class="sections" id="sec1">
+	
+		
+
+			<div id="APics">
+				<img src="contact/Diana1.jpg" id="aPicSlides">
+			</div>
+
+		
+
+	<!-- <center> -->
+	<form>
+
+		<h3>Contact Me</h3>
+			
+			Name:<br>
+			<input type="text" name="firstname" class="nameFillIn"><br>
+			
+			Email Address:<br>
+			<input type="text" name="lastname" class="nameFillIn"><br>
+			
+			Message:<br>
+			<input type="text" name="Message" class="messageFillIn"><br>
+			
+			<br>
+			<input type="button" name="Submit" value="submit" class="submitButton"><br>
+
+		
+	</form>
+	<!-- </center> -->	
+	
+	</div>
+
+	
+
+
+<!-- //********************************** This is the table div for the footer ***********************************// -->
+
+		<footer>	
+
+				<div class="footer" id="footer1">
+
+						<table>
+
+
+							<center>		
+			                <tr>
+
+			                  <td class="social"><a href="https://www.facebook.com/"><img src="images/facebooklogo.png"></a></td>
+			                  
+			                  <td class="social"><a href="https://www.instagram.com/?hl=en"><img src="images/instagramlogo.png"></a></td>
+
+			                  <td class="social"><a href="https://www.linkedin.com/in/diana-hern%C3%A1ndez-10668237/"><img src="images/linkedInLogo.png"></a></td>
+
+			                  <td class="social"><a href="https://twitter.com/?lang=en"><img src="images/twitterlogo.png"></a></td>
+
+			                  <td class="social"><a href="https://www.pinterest.com/"><img src="images/pinterestLogo.png"></a></td>
+			             		
+			             	</tr>
+			            	</center>
+
+			              </table>
+			
+
+			        </div>
+
+					<div class="footer" id="footer2">
+				        <center>
+				        <p>|	116th Street and Broadway, New York, NY 10027 	|</p>
+				        </center>	
+			        </div>
+
+			        <div class="footer" id="footer3">
+			        	<center>
+			        	<p>Contact Me</p>
+			        	</center>	
+			        </div>
+
+			   
+
+	    </footer>
+
+
+	<script type="text/javascript">
+
+		var arraySlides = ["contact/Diana2.jpg", "contact/Diana3.jpg", "contact/Diana4.jpg", "contact/Diana5.jpg", "contact/Diana6.jpg", "contact/Diana7.jpg"];
+
+		var arraySlidesIndex = 0;
+		var arraySlidesLength = arraySlides.length -1;
+
+		function autoSlide(){
+			setInterval(nextSlide, 3000, 1);
+
+
+		function nextSlide() {
+			arraySlidesIndex++;
+			console.log(arraySlidesIndex);
+
+			if(arraySlidesIndex > arraySlidesLength){
+				arraySlidesIndex = 0;
+			}
+			if(arraySlidesIndex < 0){
+				arraySlidesIndex = arraySlidesLength;
+
+			}
+			document.getElementById('aPicSlides').src = arraySlides[arraySlidesIndex];
+
+			return false;
+		}
+
+	}
+
+	</script>
+
+
+
+</body>
+
+</html>

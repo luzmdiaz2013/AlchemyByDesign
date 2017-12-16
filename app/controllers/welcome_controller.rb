@@ -1,27 +1,27 @@
 class WelcomeController < ApplicationController
 
   def index
-    render plain: "WELCOME Home Page"
+
   end
 
-  # def about
-  #   render plain: "About"
-  # end
+  def about
 
-  # def publications
-  #   render plain: "Publications"
-  # end
+  end
 
-  # def videos
-  #   render plain: "Videos"
-  # end
+  def publications
 
-  # def audio
-  #   render plain: "Audio"
-  # end
+  end
 
-  # def contact
-  #   render plain: "Contact"
-  # end
+  def videos
+
+  end
+
+  def audio
+
+  end
+
+  def contact
+
+  end
 
 end

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <!-- //********************************* This is the link to the css **********************************// -->
+  <link href="FinalProject.css" rel="stylesheet" type="text/css"><!-- //************************************* This is the link to the font ******************************// -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Quicksand|Raleway" rel="stylesheet">
+
+  <title>Videos</title>
+  <style type="text/css">
+
+     body{
+     margin: 0;
+     padding: 0;
+
+
+     }
+
+     h1{
+         font-size: 50px;
+     }
+
+     .sections{
+
+         height: auto;
+         width: 100vw;
+         display: flex;
+     }
+
+     #header{
+         margin: 0;
+         padding: 0;
+     }
+
+     #pub{
+         font-family: 'Raleway', sans-serif;
+         color: #1C1211;
+     }
+
+     .videos{
+         display: inline-block;
+
+     }
+
+     .videoPac{
+         display: flex;
+         flex-direction: row;
+         width:100vw;
+         margin: 10px;
+     }
+
+     .vids{
+         flex:1;
+         height: 300px;
+         width: 500px;
+         margin: 50px;
+
+
+         font-family: 'Raleway', sans-serif;
+         color: #1C1211;
+         display: inline-block;
+
+     }
+
+     #vidQuote1{
+        font-size: 25px;
+        font-family: 'Raleway', sans-serif;
+        text-align: left;
+        color: #6B5350;
+        font-style: italic;
+        margin-top: 50px;
+        height: 300px;
+        visibility: hidden;
+
+     }
+
+
+     #vidQuote2{
+            font-size: 25px;
+            font-family: 'Raleway', sans-serif;
+            text-align: left;
+            color: #6B5350;
+            font-style: italic;
+            margin-top: 50px;
+            height: 300px;
+            visibility: hidden;
+
+     }
+
+     #vidQuote3{
+            font-size: 25px;
+            font-family: 'Raleway', sans-serif;
+            text-align: left;
+            color: #6B5350;
+            font-style: italic;
+            margin-top: 50px;
+            height: 300px;
+            visibility: hidden;
+
+     }
+
+     a{
+         text-decoration: none;
+         color: #F5F0F0;
+     }
+
+     h2{
+         font-family: 'Raleway', sans-serif;
+         font-size: 30px;
+         color: #1C1211;
+
+     }
+
+     h3{
+         font-family: 'Raleway', sans-serif;
+         color: #1C1211;
+
+     }
+
+     footer{
+         top:100px;
+     }
+
+
+
+  </style>
+</head>
+
+<body>
+  <div id="navDiv">
+    <nav>
+      <ul>
+        <li>
+          <a href="index-FinalProject.html">Home</a>
+        </li>
+
+
+        <li>
+          <a href="Bio.html">About</a>
+        </li>
+
+
+        <li>
+          <a href="Projects.html">Projects</a>
+        </li>
+
+
+        <li>
+          <a href="Publications.html">Publications</a>
+        </li>
+
+
+        <li>
+          <a href="Videos.html">Videos</a>
+        </li>
+
+
+        <li>
+          <a href="Audio.html">Audio</a>
+        </li>
+
+
+        <li>
+          <a href="Contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+
+
+  <header>
+    <div id="header">
+      <br>
+      <br>
+
+
+      <h1>Alchemy by Design</h1>
+    </div>
+  </header>
+  <br>
+  <!-- ****************************** This is the Videos parent div ******************************** -->
+
+
+  <div class="sections">
+    <!-- ****************** Videos courtesy of NY1, NY1 Espanol, and Vimeo *************** -->
+
+
+    <div class="videos">
+      <center>
+        <h2 id="pub">Media Coverage - Television</h2>
+      </center>
+      <!--******************** This is the 1st video/quote combo ***************
+***** The -->
+
+
+      <div class="videoPac">
+        <div class="vids" onmouseover="showQuote('vidQuote1')">
+          <a href="https://vimeo.com/68167299"><img src="videos/BronxTalk.png"></a>
+
+          <h3>Bronx Talk 8/17/2015</h3>
+        </div>
+
+
+        <div class="vids" id="vidQuote1" onmouseover="showQuote1()">
+          <br>
+
+
+          <p>"Energy Inefficiency is an inability to adequately meet household energy needs. Approximately 16 million households in the U.S. are impacted by energy inefficiency."</p>
+        </div>
+      </div>
+
+
+      <div class="videoPac">
+        <div class="vids" id="vidQuote2">
+          <br>
+          <br>
+          <br>
+
+
+          <p>"There is a saturation of poor health, right in this neighborhood."</p>
+        </div>
+
+
+        <div class="vids" onmouseover="showQuote('vidQuote2')">
+          <a href="http://www.ny1.com/nyc/bronx/news/2015/08/11/experts-say-south-bronx-s-poor-health-caused-area-to-be-hit-hard-by-legionnaires-.html"><img src="videos/NY1Eng.png"></a>
+
+          <h3>NY1 8/11/2015 “Experts Say South Bronx's Poor Health Caused Area to Be Hit Hard by Legionnaires”</h3>
+        </div>
+      </div>
+
+
+      <div class="videoPac">
+        <div class="vids" onmouseover="showQuote('vidQuote3')">
+          <a href="http://www.ny1noticias.com/nyc/twc-ny1-noticias/noticias/2015/12/10/la-comunidad-latina-es-la-que-m-s-acude-al-hospital-por-el-asma-en-ny.html"><img src="videos/NY1Span.png"></a>
+
+          <h3>NY1 Noticias: La comunidad latina es la que más acude al hospital por el asma en NY</h3>
+        </div>
+
+
+        <div class="vids" id="vidQuote3">
+          <br>
+          <br>
+          <br>
+
+
+          <p>"Limpiar a menudos y limpiar con productos que no sean muy toxicos, so usando productos naturales."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+
+
+     function showQuote(quote){
+         document.getElementById(quote).style.visibility = 'visible';
+     }
+
+  </script>
+
+  <div id="footer">
+    <!-- //********************************** This is the table div for Footer ***********************************// -->
+
+
+    <footer>
+      <div class="footer" id="footer1">
+        <center>
+        </center>
+
+
+        <table>
+          <tr>
+            <td class="social">
+              <a href="https://www.facebook.com/"><img src="images/facebooklogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.instagram.com/?hl=en"><img src="images/instagramlogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.linkedin.com/in/diana-hern%C3%A1ndez-10668237/"><img src="images/linkedInLogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://twitter.com/?lang=en"><img src="images/twitterlogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.pinterest.com/"><img src="images/pinterestLogo.png"></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div class="footer" id="footer2">
+        <center>
+          <p>| 116th Street and Broadway, New York, NY 10027 |</p>
+        </center>
+      </div>
+
+
+      <div class="footer" id="footer3">
+        <center>
+          <p><a href="Contact.html">Contact Me</a>
+          </p>
+        </center>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

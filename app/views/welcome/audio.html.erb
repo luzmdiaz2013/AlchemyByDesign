@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <!-- //********************************* This is the link to the css **********************************// -->
+  <link href="FinalProject.css" rel="stylesheet" type="text/css"><!-- //************************************* This is the link to the font ******************************// -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Quicksand|Raleway" rel="stylesheet">
+
+  <title>Audio</title>
+  <style type="text/css">
+
+           body{
+           margin: 0;
+           padding: 0;
+
+
+           }
+
+           h1{
+               font-size: 50px;
+           }
+
+           .sections{
+
+               height: auto;
+               width: 100vw;
+               display: flex;
+           }
+
+           #header{
+               margin: 0;
+               padding: 0;
+           }
+
+
+           #pub{
+               font-family: 'Raleway', sans-serif;
+               color: #1C1211;
+           }
+
+           .modalPic{
+               margin: 20px 150px;
+           }
+
+           .audio{
+               justify-content: space-between;
+               height: 300px;
+               width: 550px;
+               margin: 20px;
+               flex: 1;
+               font-family: 'Raleway', sans-serif;
+               color: #1C1211;
+               background-color: orange;
+               padding-bottom: 50px;
+
+           }
+
+
+           a{
+               text-decoration: none;
+               color: #F5F0F0;
+           }
+
+           h2{
+               font-family: 'Raleway', sans-serif;
+               font-size: 30px;
+               color: #1C1211;
+           }
+
+           footer{
+               top:155px;
+           }
+
+           /*************************** Modal from Class  ******************/
+
+           .modalDialog {
+             position: fixed;
+             font-family: 'Raleway', sans-serif;
+             top: 0;
+             right: 0;
+             bottom: 0;
+             left: 0;
+             background: none/*rgba(0,0,0,0.8)*/;
+             z-index: 99999;
+             opacity:0;
+             -webkit-transition: opacity 500ms ease-in;
+             -moz-transition: opacity 500ms ease-in;
+             transition: opacity 500ms ease-in;
+             pointer-events: none;
+             }
+
+             .modalDialog:target {
+               opacity:1;
+               pointer-events: auto;
+             }
+
+             .modalDialog > div {
+             width: 650px;
+             height: auto;
+             position: relative;
+             margin: 10% auto;
+             padding: 5px 20px 13px 20px;
+             border-radius: 10px;
+             background: #fff;
+             background: -moz-linear-gradient(#fff, #999);
+             background: -webkit-linear-gradient(#fff, #999);
+             background: -o-linear-gradient(#fff, #999);
+             flex: 1;
+             }
+
+             .close {
+             background: #6B5350;
+             color: #FFFFFF;
+             line-height: 25px;
+             position: absolute;
+             right: -12px;
+             text-align: center;
+             top: -10px;
+             width: 24px;
+             text-decoration: none;
+             font-weight: bold;
+             -webkit-border-radius: 12px;
+             -moz-border-radius: 12px;
+             border-radius: 12px;
+             -moz-box-shadow: 1px 1px 3px #000;
+             -webkit-box-shadow: 1px 1px 3px #000;
+             box-shadow: 1px 1px 3px #000;
+             }
+
+        .close:hover { background: #00d9ff; }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="navDiv">
+    <nav>
+      <ul>
+        <li>
+          <a href="index-FinalProject.html">Home</a>
+        </li>
+
+
+        <li>
+          <a href="Bio.html">About</a>
+        </li>
+
+
+        <li>
+          <a href="Projects.html">Projects</a>
+        </li>
+
+
+        <li>
+          <a href="Publications.html">Publications</a>
+        </li>
+
+
+        <li>
+          <a href="Videos.html">Videos</a>
+        </li>
+
+
+        <li>
+          <a href="Audio.html">Audio</a>
+        </li>
+
+
+        <li>
+          <a href="Contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+
+
+  <header>
+    <div id="header">
+      <br>
+      <br>
+
+
+      <h1>Alchemy by Design</h1>
+    </div>
+  </header>
+  <br>
+  <!-- ****************************** This is the Audio parent div ******************************** -->
+   <!-- ****************** Audio courtesy of NPR, Soundcloud, BBC ******************* -->
+
+
+  <center>
+    <h2 id="pub">Media Coverage - Radio</h2>
+    <!-- *************** This is theparent dive for the Radio snippets ********** -->
+
+
+    <div class="radio">
+      <!-- ******This is the link to the 1st modal to play the radio interview *****-->
+      <a href="#openModal"><img class="modalPic" src="audio/NPR.jpg"></a>
+
+      <div class="modalDialog" id="openModal">
+        <div class="audio">
+          NPR (2017) Public Health Minute with Bill Latimer, PhD MPH “Energy Insecurity” <a class="close" href="#close" title="Close">X</a> <iframe frameborder="no" height="166" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/247357630&amp;color=ff5500" width="100%"></iframe>
+        </div>
+      </div>
+      <!-- *****This is the link to the 2nd modal to play the next radio interview *******--><a href="#openModal2"><img class="modalPic" src="audio/WNYC.png"></a>
+
+      <div class="modalDialog" id="openModal2">
+        <div class="audio">
+          WNYC (NPR-NYC) (2016) “Returning to Mott Haven and the South Bronx” <a class="close" href="#close" title="Close">X</a> <iframe frameborder="0" height="166" scrolling="no" src="https://www.wnyc.org/widgets/ondemand_player/wnyc/#file=/audio/json/684198/&share=1" width="100%"></iframe>
+        </div>
+      </div>
+    </div>
+  </center>
+
+
+  <div id="footer">
+    <!-- //********************************** This is the table div for Footer ***********************************// -->
+
+
+    <footer>
+      <div class="footer" id="footer1">
+        <center>
+        </center>
+
+
+        <table>
+          <tr>
+            <td class="social">
+              <a href="https://www.facebook.com/"><img src="images/facebooklogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.instagram.com/?hl=en"><img src="images/instagramlogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.linkedin.com/in/diana-hern%C3%A1ndez-10668237/"><img src="images/linkedInLogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://twitter.com/?lang=en"><img src="images/twitterlogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.pinterest.com/"><img src="images/pinterestLogo.png"></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div class="footer" id="footer2">
+        <center>
+          <p>| 116th Street and Broadway, New York, NY 10027 |</p>
+        </center>
+      </div>
+
+
+      <div class="footer" id="footer3">
+        <center>
+          <p><a href="Contact.html">Contact Me</a>
+          </p>
+        </center>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

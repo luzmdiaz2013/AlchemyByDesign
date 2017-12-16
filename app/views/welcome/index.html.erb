@@ -1,0 +1,249 @@
+<h1>All our Articles!</h1>
+
+<ul>
+<% @articles.each do |article| %>
+  <li><%= link_to article.title, article_path(article)%></li>
+<% end %>
+</ul>
+
+<li><%= link_to "Add New Article", new_article_path(article)%></li>
+
+<li><%= link_to "Delete Article", article_path(@article)%></li>
+
+<%= form_for @article, html: {method: 'delete'} do |f| %>
+  <%= f.submit "Delete #{@article.title}??" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <!-- //********************************* This is the link to the css **********************************// -->
+  <link href="FinalProject.css" rel="stylesheet" type="text/css"><!-- //********************************** This is the link to the font ********************************// -->
+
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Quicksand|Raleway" rel="stylesheet">
+
+  <title>Alchemy By Design</title>
+  <style type="text/css">
+
+     body{
+     margin: 0;
+     }
+
+     h1{
+         font-size: 50px;
+     }
+
+     section{
+         height:auto;
+         width:100vw;
+
+     }
+     #container{
+         height:auto;
+         width:100vw;
+     }
+     .sec1{
+         height:auto;
+         width:100vw;
+
+     }
+     .main{
+         height: 600px;
+         width: 500px;
+         background-position: center;
+         background-repeat: no-repeat;
+         margin: 30px;
+         display: inline-block;
+         vertical-align: top;
+     }
+
+     #pic{
+        padding:40px;
+         background-image: url(images/brownstone.jpeg);
+         position: absolute;
+
+
+     }
+
+     #quote{
+         height:300px;
+         width: 600px;
+         font-size: 35px;
+         font-family: 'Raleway', sans-serif;
+         text-align: left;
+         color: #6B5350;
+         font-style: italic;
+         margin-top: 200px;
+         position: absolute;
+
+
+     }
+
+     footer{
+         top:700px;
+     }
+
+     a{
+         text-decoration: none;
+         color: #F5F0F0;
+     }
+
+  </style>
+</head>
+
+<body onload="MovePicQuote()">
+  <section id="container">
+    <div id="navDiv">
+      <nav>
+        <ul>
+          <li>
+            <a href="index-FinalProject.html">Home</a>
+          </li>
+
+
+          <li>
+            <a href="Bio.html">About</a>
+          </li>
+
+
+          <li>
+            <a href="Projects.html">Projects</a>
+          </li>
+
+
+          <li>
+            <a href="Publications.html">Publications</a>
+          </li>
+
+
+          <li>
+            <a href="Videos.html">Videos</a>
+          </li>
+
+
+          <li>
+            <a href="Audio.html">Audio</a>
+          </li>
+
+
+          <li>
+            <a href="Contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <br>
+
+
+    <header>
+      <div id="header">
+        <br>
+        <br>
+        <br>
+
+
+        <h1>Alchemy by Design</h1>
+      </div>
+    </header>
+    <br>
+
+
+    <div class="sections" id="sec1">
+      <div class="main" id="pic">
+      </div>
+
+
+      <div class="main" id="quote">
+        <p>Providing upscale housing options to upwardly mobile Bronxites to combat local brain-drain, concentrated poverty, and promote community engagement.</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+    // -------------------- This is the quote coming from the right moving to the left and the brownstone moving from left to right to meet in the middle ---------------//
+
+
+      function MovePicQuote() {
+             var A = document.getElementById("quote");
+             var B = document.getElementById("pic");
+             var pos = -630;
+             var id = setInterval(frame, 8);
+             function frame () {
+                 if (pos >= 225){
+                     clearInterval(id);
+
+                 } else {
+                     pos+=2;//rate of pixel change
+                     A.style.right = pos + 'px';
+                     B.style.left = pos + 'px';
+
+                 }
+             }
+
+      }
+
+
+
+
+
+
+
+
+
+    </script> <!-- //********************************** This is the table div for the footer ***********************************// -->
+    <footer>
+      <div class="footer" id="footer1">
+        <center>
+        </center>
+
+
+        <table>
+          <tr>
+            <td class="social">
+              <a href="https://www.facebook.com/"><img src="images/facebooklogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.instagram.com/?hl=en"><img src="images/instagramlogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.linkedin.com/in/diana-hern%C3%A1ndez-10668237/"><img src="images/linkedInLogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://twitter.com/?lang=en"><img src="images/twitterlogo.png"></a>
+            </td>
+
+            <td class="social">
+              <a href="https://www.pinterest.com/"><img src="images/pinterestLogo.png"></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div class="footer" id="footer2">
+        <center>
+          <p>| 116th Street and Broadway, New York, NY 10027 |</p>
+        </center>
+      </div>
+
+
+      <div class="footer" id="footer3">
+        <center>
+          <p><a href="Contact.html">Contact Me</a>
+          </p>
+        </center>
+      </div>
+    </footer>
+</section>
+
+
+
+
+
+
+</body>
+
+
+</html>
