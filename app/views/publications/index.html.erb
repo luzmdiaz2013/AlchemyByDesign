@@ -1,7 +1,14 @@
-<h1>All our Articles!</h1>
+<h1>Original, Peer Reviewed Articles</h1>
 
 <ul>
 <% @articles.each do |article| %>
   <li><%= link_to article.title, publications_path(@article)%></li>
 <% end %>
 </ul>
+
+
+
+
+<li><%= link_to "Add New Article", new_publication_path(@article)%></li>
+
+
