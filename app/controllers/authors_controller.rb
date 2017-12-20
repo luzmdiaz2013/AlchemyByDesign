@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
       def articles
-          @articles = articles.all
+          @publication = Publication.all
       end
 
 end

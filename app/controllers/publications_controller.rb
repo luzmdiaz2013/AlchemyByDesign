@@ -1,49 +1,57 @@
 class PublicationsController < ApplicationController
-    def index
-    @articles = Article.all
+  def index
+    @publications = Publication.all
   end
 
   def show
-    @article = Article.find(params[:id])
+    puts "--- inside publication controller SHOW #{params[:id]} --- "
+    @publication = Publication.find(params[:id])
   end
 
   def new
-    @article = Article.new
+    @publication = Publication.new
   end
 
   def create
-    @article = Article.new(article_params)
-    if @article.save
-      redirect_to new_publication_path(@article)
+    @publication = Publication.new(publication_params)
+    if @publication.save
+      redirect_to publications_path(@publication)
     else
       render :new
+    end
   end
 
   def edit
-    @article = Article.find(params [:id])
+    puts "<< --- inside publication controller EDIT #{params[:id]} -- #{publication_params}--- "
+    puts " --- #{publication_params} --- "
+    @publication = Publication.find(params[:id])
+    puts @publication
   end
 
   def update
-    @article = Article.find(params [:id])
-    if @article.update(article_params)
-      redirect_to edit_publication_path(@article)
+    @publication = Publication.find(params[:id])
+    if @publication.update(publication_params)
+      redirect_to edit_publication_path(@publication)
     else
-      redirect_to publication_edit_path(@article)
+      redirect_to publication_path(@publication)
     end
   end
 
   def destroy
-    @article = Article.find(params[:id])
-    @article.delete
-    redirect_to publication_path
+    puts "--- inside destroy controller #{params[:id]}"
+    @publication = Publication.find(params[:id])
+    @publication.delete
+    redirect_to publications_path
   end
 
 
   private
-    def article_params
-      params.require(:article).permit(:title, :university, :coAuthors)
-    end
 
+  def publication_params
+    params.require(:publication).permit(
+      :title,
+      :university,
+      :coAuthors)
   end
 
 end

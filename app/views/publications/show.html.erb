@@ -1,24 +1,14 @@
-<h1><%= @article.name %></h1>
+<h1><%= @publication.title %></h1>
 
-<h2>Title: <%= @article.title %></h2>
+<h2>Title: <%= @publication.title %></h2>
 
-<%= link_to "Edit  #{@article.name}", edit_publications_path(@article) %>
+<%= link_to "Edit  #{@publication.title}", edit_publication_path(@publication) %>
 
-<%= form_for @article, html: {method: 'delete'} do |f| %>
-  <%= f.submit "Delete #{@article.name}??" %>
+<%= form_for @publication, url: {method: 'delete'} do |f| %>
+  <%= f.submit "Delete #{@publication.title}??" %>
 <% end %>
 
 <%= link_to "All Articles", publications_path %>
 
 
 
-<!-- <h2>Title: <%= @article.title %></h2>
-
-<%= link_to "Edit  #{@article.title}", edit_article_path(@article) %>
-
-<%= form_for @article, html: {method: 'delete'} do |f| %>
-  <%= f.submit "Delete #{@article.title}??" %>
-<% end %>
-
-<%= link_to "All Articles", articles_path %>
- -->

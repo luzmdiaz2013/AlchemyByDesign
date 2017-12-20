@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/", to: "welcome#index"
+  get "/welcome", to: "welcome#index"
   get "/about", to: "welcome#about"
   get "/projects", to: "welcome#projects"
   # get "/publications", to: "welcome#publications"
