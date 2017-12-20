@@ -1,4 +1,7 @@
 class PublicationsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
+
   def index
     @publications = Publication.all
   end
@@ -9,11 +12,11 @@ class PublicationsController < ApplicationController
   end
 
   def new
-    @publication = Publication.new
+    @publication = current_user.publications.build
   end
 
   def create
-    @publication = Publication.new(publication_params)
+    @publication = current_user.publications.build(publication_params)
     if @publication.save
       redirect_to publications_path(@publication)
     else
