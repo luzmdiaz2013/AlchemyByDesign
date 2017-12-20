@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get "/contact", to: "welcome#contact"
 
   resources :publications
-# resources :session, only: [:new, :create, :destroy] FOR AUTH
+
+  root "publications#index"
+
 end
