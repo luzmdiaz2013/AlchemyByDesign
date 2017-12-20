@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "/", to: "welcome#index"
   get "/welcome", to: "welcome#index"
   get "/about", to: "welcome#about"
